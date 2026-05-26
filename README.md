@@ -3,16 +3,11 @@
 > Assignment 3 — NLP Pipeline for Customer Support Ticket Retrieval  
 > Built entirely from scratch using **PyTorch** and **NumPy** — no sklearn, no HuggingFace.
 
----
-
 ## Overview
 
 HSRIS is a multi-stage NLP pipeline that processes ~8,470 customer support tickets and retrieves the most relevant ones for any given query. It combines classical statistical methods (TF-IDF) with neural semantic embeddings (GloVe) into a weighted hybrid search engine, deployed as an interactive Gradio app.
 
----
-
 ## Pipeline Architecture
-
 ```
 Raw Ticket Text
       │
@@ -39,9 +34,6 @@ Raw Ticket Text
             ▼
        Top-5 Results
 ```
-
----
-
 ## Features
 
 ### Part 1 — Categorical Encoders
@@ -65,7 +57,6 @@ Raw Ticket Text
 ```
 FinalScore = α · TF-IDF_Score + (1 − α) · GloVe_Score     [α = 0.4]
 ```
-
 ### Performance Optimization
 - Dual T4 GPU support via `torch.nn.DataParallel`
 - Batch similarity computed with `torch.mm(F.normalize(Q), F.normalize(DB).T)`
@@ -80,80 +71,14 @@ FinalScore = α · TF-IDF_Score + (1 − α) · GloVe_Score     [α = 0.4]
 - Free-text ticket description input
 - **α slider** (0.0 → 1.0) to shift between keyword and semantic matching live
 - Displays predicted **Ticket Type** (top-5 majority vote)
-- Shows **top-3 similar past tickets** with subject, description, and resolution
+- Shows results with explanations and visualizations
 
----
-
-## Extra Work (Beyond Assignment Requirements)
-
-| Extra | Description |
-|---|---|
-| `build_display_text()` | Full noise-removal pipeline — replaces `{product_purchased}` with real product name, strips log lines, timestamps, IPs, prices, camelCase/snake_case tokens, and filters generic filler sentences |
-| Smooth IDF | Uses sklearn-style `log((N+1)/(df+1)) + 1` instead of plain `log(N/df)` for better robustness |
-| `display_results()` | Formatted ranked output showing Score, Type, Subject, Description for every result |
-| Search wrappers | Clean `tfidf_search_str`, `glove_search_str`, `hybrid_search_str` API accepting raw query strings |
-| `predict_ticket_type()` | Top-5 majority vote classifier for ticket type prediction |
-| Gradio Examples panel | 5 pre-filled example queries for instant demo |
-| Summary table | Markdown documentation of every pipeline component |
-
----
-
-## Dataset
-
-- **Source:** [Customer Support Ticket Dataset](https://www.kaggle.com/datasets/waseemalastal/customer-support-ticket-dataset)
-- **Scale:** ~8,470 records
-- **Fields used:** Ticket Description, Ticket Subject, Ticket Priority, Ticket Type, Ticket Channel, Product Purchased, Resolution
-
----
-
-## Setup
-
-### Platform
-Run on [Kaggle](https://www.kaggle.com/) with **GPU T4 x2** accelerator.
-
-### Datasets required (add to Kaggle notebook)
-1. `waseemalastal/customer-support-ticket-dataset`
-2. `rtatman/glove-global-vectors-for-word-representation` (200-d)
-
-### Dependencies
-All pre-installed on Kaggle. Gradio installed at runtime:
-```python
-pip install gradio
+## Usage
+To run the Gradio app, navigate to the `Assignment3-DS-NLP` directory and execute the following command:
+```bash
+python app.py
 ```
+Then, open a web browser and navigate to `http://localhost:7860` to interact with the app.
 
----
-
-## Project Structure
-
-```
-HSRIS/
-│
-├── notebook.ipynb          # Main Kaggle notebook (all code)
-├── README.md               # This file
-├── batch_timing.png        # Execution time vs batch size plot (generated)
-│
-└── Links
-    ├── GitHub              # https://github.com/your-username/hsris
-    ├── Medium Article      # https://medium.com/@your-username/hsris
-    └── LinkedIn Post       # https://linkedin.com/in/your-username
-```
-
----
-
-## Results
-
-| Metric | TF-IDF | GloVe | Hybrid (α=0.4) |
-|---|---|---|---|
-| Mean Precision@5 | — | — | — |
-
-*Fill in after running on Kaggle.*
-
----
-
-## Assignment Info
-
-- **Course:** Data Science for Software Engineering
-- **Assignment:** 3 — Hybrid Semantic Retrieval & Intelligence System
-- **Team Size:** Max 2 members
-- **Platform:** Kaggle (Dual T4 x2 GPU)
-- **Constraint:** No sklearn, no HuggingFace — PyTorch + NumPy only
+## Contributing
+Contributions are welcome! To contribute, please fork the repository and submit a pull request with your changes. Please ensure that your changes are consistent with the existing code style and formatting.
