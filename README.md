@@ -71,14 +71,10 @@ FinalScore = α · TF-IDF_Score + (1 − α) · GloVe_Score     [α = 0.4]
 - Free-text ticket description input
 - **α slider** (0.0 → 1.0) to shift between keyword and semantic matching live
 - Displays predicted **Ticket Type** (top-5 majority vote)
-- Shows results with explanations and visualizations
+- Shows results with explanation
 
-## Usage
-To run the Gradio app, navigate to the `Assignment3-DS-NLP` directory and execute the following command:
-```bash
-python app.py
-```
-Then, open a web browser and navigate to `http://localhost:7860` to interact with the app.
+## Getting Started
+To run the Gradio app, simply execute `python app.py` in your terminal. Make sure you have the required dependencies installed by running `pip install -r requirements.txt`.
 
 ## Contributing
-Contributions are welcome! To contribute, please fork the repository and submit a pull request with your changes. Please ensure that your changes are consistent with the existing code style and formatting.
+If you'd like to contribute to this project, please fork the repository and submit a pull request. We welcome any improvements or bug fixes!
