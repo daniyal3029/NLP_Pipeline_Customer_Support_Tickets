@@ -74,7 +74,10 @@ FinalScore = α · TF-IDF_Score + (1 − α) · GloVe_Score     [α = 0.4]
 - Shows results with explanation
 
 ## Getting Started
-To run the Gradio app, simply execute `python app.py` in your terminal. Make sure you have the required dependencies installed by running `pip install -r requirements.txt`.
+To get started with this project, follow these steps:
+1. Clone the repository using `git clone https://github.com/daniyal3029/NLP_Pipeline_Customer_Support_Tickets.git`
+2. Install the required dependencies using `pip install -r requirements.txt`
+3. Run the Gradio app using `gradio app.py`
 
 ## Contributing
-If you'd like to contribute to this project, please fork the repository and submit a pull request. We welcome any improvements or bug fixes!
+If you'd like to contribute to this project, please fork the repository and submit a pull request. Make sure to include a detailed description of your changes and follow the existing code style.
