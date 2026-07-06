@@ -71,13 +71,18 @@ FinalScore = α · TF-IDF_Score + (1 − α) · GloVe_Score     [α = 0.4]
 - Free-text ticket description input
 - **α slider** (0.0 → 1.0) to shift between keyword and semantic matching live
 - Displays predicted **Ticket Type** (top-5 majority vote)
-- Shows results with explanation
+- Shows results with explanations
 
 ## Getting Started
-To get started with this project, follow these steps:
+To get started with the HSRIS project, follow these steps:
 1. Clone the repository using `git clone https://github.com/daniyal3029/NLP_Pipeline_Customer_Support_Tickets.git`
 2. Install the required dependencies using `pip install -r requirements.txt`
-3. Run the Gradio app using `gradio app.py`
+3. Run the Gradio app using `python app.py`
 
 ## Contributing
-If you'd like to contribute to this project, please fork the repository and submit a pull request. Make sure to include a detailed description of your changes and follow the existing code style.
+To contribute to the HSRIS project, follow these steps:
+1. Fork the repository using `git fork https://github.com/daniyal3029/NLP_Pipeline_Customer_Support_Tickets.git`
+2. Create a new branch using `git branch <branch-name>`
+3. Make changes and commit them using `git commit -m "<commit-message>"`
+4. Push the changes using `git push origin <branch-name>`
+5. Create a pull request using the GitHub web interface
