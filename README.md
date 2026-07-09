@@ -45,7 +45,7 @@ Raw Ticket Text
 ### Part 2 — Sparse Keyword Retrieval
 - **Custom Tokenizer** — regex-based, lowercasing, removes noise (logs, timestamps, IPs, prices, placeholders)
 - **Bag of Words** — top 5,000 token vocabulary, count vectors
-- **N-Gram Generator** — sliding window bigrams and trigrams (e.g. `"not_working"`, `"payment_not_working"`)
+- **N-Gram Generator** — sliding window bigrams and trigrams (e.g. `not_working`, `payment_not_working`)
 - **TF-IDF** — smooth IDF (`log((N+1)/(df+1)) + 1`) computed from scratch, stored as `torch.sparse` tensor to save Kaggle RAM
 
 ### Part 3 — Dense Semantic Layer
@@ -74,15 +74,14 @@ FinalScore = α · TF-IDF_Score + (1 − α) · GloVe_Score     [α = 0.4]
 - Shows results with explanations
 
 ## Getting Started
-To get started with the HSRIS project, follow these steps:
-1. Clone the repository using `git clone https://github.com/daniyal3029/NLP_Pipeline_Customer_Support_Tickets.git`
-2. Install the required dependencies using `pip install -r requirements.txt`
-3. Run the Gradio app using `python app.py`
+To get started with this project, follow these steps:
+1. Clone the repository: `git clone https://github.com/daniyal3029/NLP_Pipeline_Customer_Support_Tickets.git`
+2. Install the required packages: `pip install -r requirements.txt`
+3. Run the Gradio app: `python app.py`
 
 ## Contributing
-To contribute to the HSRIS project, follow these steps:
-1. Fork the repository using `git fork https://github.com/daniyal3029/NLP_Pipeline_Customer_Support_Tickets.git`
-2. Create a new branch using `git branch <branch-name>`
-3. Make changes and commit them using `git commit -m "<commit-message>"`
-4. Push the changes using `git push origin <branch-name>`
-5. Create a pull request using the GitHub web interface
+To contribute to this project, please follow these guidelines:
+1. Fork the repository
+2. Create a new branch for your feature
+3. Implement your feature and commit your changes
+4. Open a pull request against the main branch
