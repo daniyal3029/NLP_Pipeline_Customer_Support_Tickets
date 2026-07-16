@@ -71,17 +71,13 @@ FinalScore = α · TF-IDF_Score + (1 − α) · GloVe_Score     [α = 0.4]
 - Free-text ticket description input
 - **α slider** (0.0 → 1.0) to shift between keyword and semantic matching live
 - Displays predicted **Ticket Type** (top-5 majority vote)
-- Shows results with explanations
+- Shows results with explanation
 
 ## Getting Started
-To get started with this project, follow these steps:
+To get started with the project, please follow these steps:
 1. Clone the repository: `git clone https://github.com/daniyal3029/NLP_Pipeline_Customer_Support_Tickets.git`
-2. Install the required packages: `pip install -r requirements.txt`
+2. Install the required libraries: `pip install torch numpy`
 3. Run the Gradio app: `python app.py`
 
 ## Contributing
-To contribute to this project, please follow these guidelines:
-1. Fork the repository
-2. Create a new branch for your feature
-3. Implement your feature and commit your changes
-4. Open a pull request against the main branch
+Contributions are welcome! If you'd like to contribute to the project, please submit a pull request with your changes. Please ensure that your code is well-documented and follows the existing coding style.
