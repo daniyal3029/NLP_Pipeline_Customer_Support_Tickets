@@ -75,13 +75,13 @@ FinalScore = α · TF-IDF_Score + (1 − α) · GloVe_Score     [α = 0.4]
 
 ## Getting Started
 To get started with the project, follow these steps:
-1. Clone the repository using `git clone https://github.com/daniyal3029/NLP_Pipeline_Customer_Support_Tickets.git`
-2. Install the required packages using `pip install -r requirements.txt`
-3. Run the Gradio app using `python app.py`
+1. Clone the repository: `git clone https://github.com/daniyal3029/NLP_Pipeline_Customer_Support_Tickets.git`
+2. Install the required dependencies: `pip install -r requirements.txt`
+3. Run the Gradio app: `python app.py`
 
 ## Contributing
-Contributions are welcome! To contribute to the project, follow these steps:
-1. Fork the repository using `git fork https://github.com/daniyal3029/NLP_Pipeline_Customer_Support_Tickets.git`
-2. Make your changes and commit them using `git commit -m "Your commit message"`
-3. Create a pull request using `git pull-request`
-
+To contribute to the project, please follow these guidelines:
+1. Fork the repository
+2. Create a new branch for your feature
+3. Commit your changes with a meaningful commit message
+4. Open a pull request
